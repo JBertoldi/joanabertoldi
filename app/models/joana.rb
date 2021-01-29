@@ -1,6 +1,6 @@
 class Joana < ApplicationRecord
-  has_one :dashboard
-  has_many :repos
+  has_one :dashboard, dependent: :destroy
+  has_many :repos, dependent: :destroy
 
   validates :name, :username, :location, :bio, format: { with: /\A([\p{L}[-']])+(\s[\p{L}[-']]+)*\Z/ }
 
