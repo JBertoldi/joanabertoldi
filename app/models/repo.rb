@@ -7,6 +7,8 @@ class Repo < ApplicationRecord
 
   before_validation :strip_details
 
+  scope :date_ordered, -> { order(gh_created_at: :desc) }
+
   private
 
   def strip_details
