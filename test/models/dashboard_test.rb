@@ -2,12 +2,17 @@ require 'test_helper'
 
 class DashboardTest < ActiveSupport::TestCase
   def setup
-    @dashboard1 = Dashboard.new(contributions: 50,
-                                repos_count: 12,
-                                joana_id: Joana.first.id)
-    @dashboard2 = Dashboard.new(contributions: '12',
-                                repos_count: '12d',
-                                joana_id: Joana.first.id)
+    @dashboard1 = Dashboard.new(
+      contributions: 50,
+      repos_count: 12,
+      joana_id: Joana.first.id
+    )
+
+    @dashboard2 = Dashboard.new(
+      contributions: '12',
+      epos_count: '12d',
+      joana_id: Joana.first.id
+    )
   end
 
   test 'dashboard1 should be valid' do
