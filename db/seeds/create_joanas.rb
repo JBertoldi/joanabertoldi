@@ -7,7 +7,8 @@ def create_joanas(url)
     location: json[:location],
     bio: json[:bio],
     email: json[:email],
-    repos_url: json[:repos_url]
+    repos_url: json[:repos_url],
+    gh_created_at: json[:created_at]
   )
 
   puts Joana.last

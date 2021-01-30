@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_29_185935) do
+ActiveRecord::Schema.define(version: 2021_01_29_235932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_01_29_185935) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "email"
     t.string "repos_url"
+    t.datetime "gh_created_at"
+    t.integer "repos_count", default: 0
   end
 
   create_table "repos", force: :cascade do |t|

@@ -1,5 +1,5 @@
 class Repo < ApplicationRecord
-  belongs_to :joana
+  belongs_to :joana, counter_cache: true
   has_many :commits, dependent: :destroy
 
   validates :name, format: { with: /\A([\p{L}-])+(\s[\p{L}-]+)*\Z/ }
