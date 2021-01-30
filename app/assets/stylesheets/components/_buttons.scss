@@ -1,0 +1,38 @@
+// Btns - general
+.btn {
+  padding: 8px 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Navbar - btn
+.btn-nav {
+  width: 130px;
+  height: 45px;
+  border: 2px solid #fff;
+  background-color: rgba(0,0,0,0.3);
+  transition: all 0.3s
+}
+
+.btn-nav:hover {
+  background-color: $none;
+  box-shadow: none;
+  box-shadow: $shadow-medium;
+}
+
+// Navbar - link
+.link {
+  width: 100px;
+  height: 45px;
+  padding: 8px 4px;
+  border-bottom: 3px solid $none;
+  transition: all 0.3s
+}
+
+.link:hover {
+  border-bottom: 2.5px solid #fff;
+  box-shadow: 0 2px 1px -1px $dark-blue;
+}
+

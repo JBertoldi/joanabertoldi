@@ -1,0 +1,19 @@
+<nav class='navbar'>
+
+  <div class="home-links">
+    <%= link_to root_path do %>
+      <h4><%= get_name(@joana.name, 0) %></h4>
+      <h4><%= get_name(@joana.name, 1) %></h4>
+    <% end %>
+  </div>
+
+  <div class="nav-links">
+    <div class="nav-link link">
+      <a href="#">Contacts</a>
+    </div>
+    <div class="nav-link btn btn-nav">
+      <%= link_to 'Projects', joana_repos_path(@joana) %>
+    </div>
+  </div>
+
+</nav>
