@@ -1,0 +1,26 @@
+// External imports
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+
+// CSS partials
+@import "components/index";
+@import "pages/index";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  min-height: 100vh;
+  position: relative;
+}
+
+a, a:hover {
+  text-decoration: none;
+}

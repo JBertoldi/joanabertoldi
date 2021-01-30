@@ -1,8 +1,11 @@
-<h1>Joanas#show</h1>
-<p>Find me in app/views/joanas/show.html.erb</p>
-<h6><%= @joana.name %></h6>
-<p><%= @joana.username %></p>
-<p><%= @joana.location %></p>
-<p><%= @joana.email %></p>
+<section class="home">
 
-<%= link_to 'Repos', joana_repos_path(@joana) %>
+  <div class="infos-container">
+    <h1><i class="fab fa-github"></i> = {</h1>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; username: &nbsp;'<%= @joana.username %>',</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; location: &nbsp;'<%= @joana.location %>',</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bio: &nbsp;'<%= @joana.bio %>'</h3>
+    <h1>&nbsp;}</h1>
+  </div>
+
+</section>
