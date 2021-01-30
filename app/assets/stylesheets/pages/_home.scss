@@ -1,0 +1,31 @@
+// Background image
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(https://images.unsplash.com/photo-1569063386798-345908ef9a62?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
+  background-position: center;
+  background-size:cover;
+  display: flex;
+}
+
+// Github profile info
+.infos-container {
+  width: 53vw;
+  margin-top: 15vh;
+  margin-left: 45vw;
+  letter-spacing: 2px;
+
+  h1 {
+    text-shadow: 2px 2px 1px #fff;
+    font-family: $headers-font;
+    text-shadow: $shadow-strong;
+    color: $soft-pink;
+  }
+
+  h3 {
+    font-family: $body-font;
+    text-shadow: $shadow-medium;
+    font-weight: 400;
+    color: #fff;
+  }
+}
