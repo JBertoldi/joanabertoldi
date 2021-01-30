@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_29_235932) do
+ActiveRecord::Schema.define(version: 2021_01_30_000942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,15 +23,6 @@ ActiveRecord::Schema.define(version: 2021_01_29_235932) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "gh_created_at"
     t.index ["repo_id"], name: "index_commits_on_repo_id"
-  end
-
-  create_table "dashboards", force: :cascade do |t|
-    t.integer "contributions"
-    t.integer "repos_count"
-    t.bigint "joana_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["joana_id"], name: "index_dashboards_on_joana_id"
   end
 
   create_table "joanas", force: :cascade do |t|
@@ -60,6 +51,5 @@ ActiveRecord::Schema.define(version: 2021_01_29_235932) do
   end
 
   add_foreign_key "commits", "repos"
-  add_foreign_key "dashboards", "joanas"
   add_foreign_key "repos", "joanas"
 end
