@@ -8,7 +8,7 @@ end
 
 def create_commits(json, repo_id)
   json.each do |commit|
-    next if commit[:author][:login] != 'JBertoldi'
+    next if commit[:author][:login] != Joana.last.username
 
     Commit.create!(
       message: commit[:commit][:message],

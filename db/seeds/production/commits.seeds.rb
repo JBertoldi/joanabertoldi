@@ -7,7 +7,7 @@ Joana.destroy_all
 puts 'Creating joanas..'
 
 url = 'https://api.github.com/user'
-json = get_json(url)
+json = get_json(url, production: true)
 
 create_joanas(json)
 
