@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_30_000942) do
+ActiveRecord::Schema.define(version: 2021_01_31_151809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2021_01_30_000942) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "gh_created_at"
     t.string "commits_url"
+    t.string "repo_owner"
+    t.integer "collaborators_count", default: 0
     t.index ["joana_id"], name: "index_repos_on_joana_id"
   end
 
