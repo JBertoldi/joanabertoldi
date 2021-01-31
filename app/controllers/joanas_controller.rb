@@ -1,5 +1,3 @@
 class JoanasController < ApplicationController
-  def show
-    @joana = Joana.find(1)
-  end
+  def show; end
 end
