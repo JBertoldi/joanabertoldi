@@ -1,10 +1,10 @@
-require_relative 'get_json'
+require_relative '../get_json'
 require_relative '../create_commits'
 
 after 'development:repos' do
-  @repos = Repo.all
+  repos = Joana.last.repos
 
-  @repos.each do |repo|
+  repos.each do |repo|
     url = repo.commits_url
     json = get_json(url)
 
