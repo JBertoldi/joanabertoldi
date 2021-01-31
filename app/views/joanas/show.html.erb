@@ -1,11 +1,16 @@
-<section class="home">
-
-  <div class="infos-container">
-    <h1><i class="fab fa-github"></i> = {</h1>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; username: &nbsp;'<%= @joana.username %>',</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; location: &nbsp;'<%= @joana.location %>',</h3>
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bio: &nbsp;'<%= @joana.bio %>'</h3>
-    <h1>&nbsp;}</h1>
+<section class="infos-container toggle">
+  <div class="header">
+    <h1>Greetings,</h1>
+    <h1>humans</h1>
   </div>
 
+  <div class="info">
+    <P>joana = {</P>
+    <div class="tabbed">
+      <P><i class="fas fa-briefcase"></i> <%= @joana.bio %></P>
+      <P><i class="fas fa-envelope"></i> <%= @joana.email %></P>
+      <P><i class="fas fa-map-marker-alt"></i> <%= @joana.location %></P>
+    </div>
+    <P>}</P>
+  </div>
 </section>

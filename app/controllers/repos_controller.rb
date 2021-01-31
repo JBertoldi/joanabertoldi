@@ -1,7 +1,6 @@
 class ReposController < ApplicationController
   def index
-    @joana = Joana.find(1)
-    @repos = Repo.date_ordered
+    @repos = @joana.repos.date_ordered.limit(3)
   end
 
   def show
