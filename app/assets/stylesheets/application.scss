@@ -19,6 +19,8 @@
 html,body {
   min-height: 100vh;
   position: relative;
+  font-family: $body-font;
+  color: #fff;
 }
 
 a, a:hover {
