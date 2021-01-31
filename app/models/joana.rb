@@ -5,6 +5,11 @@ class Joana < ApplicationRecord
 
   before_validation :strip_details
 
+  def get_initials(name)
+    name_arr = name.split(' ').take(2)
+    name_arr.map! { |n| n.chars.first }.join
+  end
+
   private
 
   def strip_details
