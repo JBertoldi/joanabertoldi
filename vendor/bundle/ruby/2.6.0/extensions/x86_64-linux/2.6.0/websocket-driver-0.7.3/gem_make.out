@@ -1,0 +1,15 @@
+current directory: /home/jbos/code/JBertoldi/joanabertoldi/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/home/jbos/.rbenv/versions/2.6.6/bin/ruby -I /home/jbos/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210201-3669-17uja2w.rb extconf.rb
+creating Makefile
+
+current directory: /home/jbos/code/JBertoldi/joanabertoldi/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/jbos/code/JBertoldi/joanabertoldi/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/jbos/code/JBertoldi/joanabertoldi/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20210201-3669-paecpy
