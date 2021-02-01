@@ -1,32 +1,43 @@
-// On profile page
-function appendHtml () {
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const url = 'https://github.com/jbertoldi';
+function insertRepos(doc) {
+  const repositories = document.querySelector('.repositories');
+  const repos = doc.querySelector('.Counter').innerHTML;
 
-  fetch(proxyurl + url)
-    .then(response => response.text())
-    .then(data => {
-      const contributions = document.querySelector('.contributions');
-      const repositories = document.querySelector('.repositories');
-      const dailyAvg = document.querySelector('.daily-avg');
+  repositories.insertAdjacentHTML('beforeend', `<i class="fas fa-laptop-code"></i>${repos} repositories created`);
+}
 
-      const doc = new DOMParser().parseFromString(data, "text/html");
-      const contri = doc.querySelector('.js-yearly-contributions .mb-2').innerHTML;
-      const repos = doc.querySelector('.Counter').innerHTML; 
-      const ghDays = document.querySelector('.gh-days').innerHTML; 
+function insertContributionsInfo(doc) {
+  const contributions = document.querySelector('.contributions');
+  const dailyAvg = document.querySelector('.daily-avg');
 
-      const contributionsInteger = parseInt(contri.replace(/[^\d.]/, ''), 10)
-      const dailyGhAvg = (contributionsInteger / ghDays).toFixed(2)
-  
-      dailyAvg.insertAdjacentHTML('beforeend', `<i class="fas fa-calculator"></i> ${dailyGhAvg} contributions per day`);
-      contributions.insertAdjacentHTML('beforeend', `<i class="fas fa-code"></i> ${contri}`);
-      repositories.insertAdjacentHTML('beforeend', `<i class="fas fa-laptop-code"></i>${repos} repositories created`);
-    })
+  let contriText = doc.querySelector('.js-yearly-contributions .mb-2').innerHTML;
+  const days = document.querySelector('.gh-days').innerHTML;
+
+  // Remove unwanted elements
+  let contriTextArr = contriText.trim().split(' ');
+  contriTextArr = contriTextArr.splice(0, 2).concat(contriTextArr.splice(9, 2));
+
+  // Set values to insert
+  const contriCount = contriTextArr[0];
+  const avg = (contriCount / days).toFixed(2);
+  const contriString = contriTextArr.join(' ');
+
+  dailyAvg.insertAdjacentHTML('beforeend', `<i class="fas fa-chart-line"></i> ${avg} contributions per day`);
+  contributions.insertAdjacentHTML('beforeend', `<i class="fas fa-code"></i> ${contriString}`);
 }
 
 function getProfileInfo() {
   if (document.querySelector('.repos-info')) {
-    appendHtml();
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const url = 'https://github.com/jbertoldi';
+
+    fetch(proxyUrl + url)
+      .then(response => response.text())
+      .then(data => {
+        const doc = new DOMParser().parseFromString(data, "text/html");
+
+        insertContributionsInfo(doc);
+        insertRepos(doc);
+      })
   }
 }
 
