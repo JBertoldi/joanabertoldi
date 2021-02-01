@@ -1,4 +1,18 @@
-<h1>Repos#show</h1>
-<p>Find me in app/views/repos/show.html.erb</p>
-<h6><%= @repo.name %></h6>
-<p><%= @repo.html_url %></p>
+<h2>{ <%= @repo.format_name(@repo.name) %> }</h2>
+
+<div class="show-inner-main">
+  <div class="show-inner show-info">
+    <p><%= @repo.html_url %></p>
+    <p><%= @repo.commits_count %></p>
+    <p><%= @repo.repo_owner %></p>
+    <p><%= @repo.collaborators_count %></p>
+  </div>
+  <div class="show-inner show-commits">
+    <p><%= @joana.username %> commits</p>
+    <ul>
+      <% @repo.commits.each do |commit| %>
+        <li><i class="fas fa-angle-double-right"></i> <a href="<%= commit.html_url %>" target="_blank"><%= commit.message%></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

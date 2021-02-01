@@ -1,7 +1,7 @@
 require_relative '../get_json'
 require_relative '../create_repos'
 
-after 'development:joanas' do
+after 'production:joanas' do
   url = Joana.last.repos_url
   json = get_json(url, production: true)
 

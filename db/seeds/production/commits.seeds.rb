@@ -1,14 +1,16 @@
 require_relative '../get_json'
-require_relative '../create_joanas'
+require_relative '../create_commits'
 
-puts 'Destroying joanas..'
-Joana.destroy_all
+after 'production:repos' do
+  repos = Joana.last.repos
 
-puts 'Creating joanas..'
+  repos.each do |repo|
+    url = repo.commits_url
+    json = get_json(url, production: true)
 
-url = 'https://api.github.com/user'
-json = get_json(url, production: true)
+    puts 'Creating commits..'
+    create_commits(json, repo.id)
 
-create_joanas(json)
-
-puts 'Done!'
+    puts 'Done'
+  end
+end
