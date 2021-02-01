@@ -1,5 +1,5 @@
 current directory: /home/jbos/code/JBertoldi/joanabertoldi/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
-/home/jbos/.rbenv/versions/2.6.6/bin/ruby -I /home/jbos/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210201-3669-ns9aw3.rb extconf.rb
+/home/jbos/.rbenv/versions/2.6.6/bin/ruby -I /home/jbos/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210201-1434-n7pcv.rb extconf.rb
 creating Makefile
 
 current directory: /home/jbos/code/JBertoldi/joanabertoldi/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.so
 
 current directory: /home/jbos/code/JBertoldi/joanabertoldi/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20210201-3669-f96yr3/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20210201-1434-1toxi70/sassc
