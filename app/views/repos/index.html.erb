@@ -1,8 +1,27 @@
-<h1>Repos#index</h1>
-<p>Find me in app/views/repos/index.html.erb</p>
-<% @repos.each do |repo| %>
-  <%= link_to joana_repo_path(@joana.id, repo.id) do %>
-    <h6><%= repo.name %></h6>
-    <p><%= repo.commits_count %></p>
+<h2>{ GitHub Repos }</h2>
+
+<div class="repos-info">
+  <div class="repo-info">
+    <p class="repositories"></p>
+  </div>
+  <div class="repo-info">
+    <p class="contributions"></p>
+  </div>
+  <div class="repo-info">
+    <p class="daily-avg"></p>
+  </div>
+</div>
+
+<p>Most recent work</p>
+<div class="cards">
+  <% @repos.each do |repo| %>
+    <%= link_to joana_repo_path(@joana, repo.id) do %>
+      <div class="card">
+        <h4><%= repo.format_name(repo.name) %></h4>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
+<a href="https://github.com/JBertoldi?tab=repositories">See more</a>
+<span class="gh-days" style="visibility:hidden"><%= (Date.today - @joana.gh_created_at.to_date).to_i %></span>

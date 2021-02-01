@@ -9,6 +9,11 @@ class Repo < ApplicationRecord
 
   scope :date_ordered, -> { order(gh_created_at: :desc) }
 
+  def format_name(name)
+    name_arr = name.split('-')
+    name_arr.map(&:capitalize).join(' ')
+  end
+
   private
 
   def strip_details
