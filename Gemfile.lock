@@ -249,7 +249,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
-  rake
+  rake (~> 13.0, >= 13.0.1)
   rest-client
   sass-rails (>= 6)
   seedbank
