@@ -4,8 +4,10 @@ require("@rails/activestorage").start()
 require("channels")
 
 // Internal imports
-const { toggleCard } = require("../components/toggleCard");
+import { toggleCard } from '../components/toggleCard';
+import { getProfileInfo } from '../components/fetchProfile';
 
 document.addEventListener('turbolinks:load', () => {
+  getProfileInfo();
   toggleCard();
 });
