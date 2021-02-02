@@ -19,6 +19,7 @@ function insertContributionsInfo(doc) {
   // Set values to insert
   const contriCount = contriTextArr[0];
   const avg = (contriCount / days).toFixed(2);
+
   const contriString = contriTextArr.join(' ');
 
   dailyAvg.insertAdjacentHTML('beforeend', `<i class="fas fa-chart-line"></i> ${avg} contributions per day`);
@@ -28,9 +29,8 @@ function insertContributionsInfo(doc) {
 function getProfileInfo() {
   if (document.querySelector('.repos-info')) {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const url = 'https://github.com/jbertoldi';
 
-    fetch(proxyUrl + url)
+    fetch(`${proxyUrl}https://github.com/jbertoldi`)
       .then(response => response.text())
       .then(data => {
         const doc = new DOMParser().parseFromString(data, "text/html");
@@ -41,4 +41,4 @@ function getProfileInfo() {
   }
 }
 
-export { getProfileInfo }
+export { getProfileInfo };
