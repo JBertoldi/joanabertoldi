@@ -48,6 +48,6 @@
   transition: all 0.3s
 }
 
-.link:hover {
+.link:hover, .active {
   border-bottom: 2px solid #fff;
 }
