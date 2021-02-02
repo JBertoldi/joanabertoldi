@@ -16,7 +16,7 @@ def display_repo(repo)
 end
 
 def create_repos(json)
-  filtered_repos = %w[fit-food the-mob-club grandma-palooza]
+  filtered_repos = %w[fit-food the-mob-club grandma-palooza cocktails-and-beverages one-piece-api]
   json.each do |repo|
     next unless filtered_repos.include?(repo[:name])
 
