@@ -9,7 +9,7 @@
   </div>
 
   <div class="nav-links">
-    <div class="nav-link link">
+    <div class="nav-link link <%= 'active' if current_page?(joana_repos_path(@joana))%>">
       <%= link_to 'Projects', joana_repos_path(@joana) %>
     </div>
     <a href="#" class="btn btn-ghost nav-link toggle-btn">Contact</a>

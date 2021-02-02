@@ -12,16 +12,40 @@
   </div>
 </div>
 
-<p>Most recent work</p>
-<div class="cards">
-  <% @repos.each do |repo| %>
-    <%= link_to joana_repo_path(@joana, repo.id) do %>
-      <div class="card">
-        <h4><%= repo.format_name(repo.name) %></h4>
-      </div>
+<p class="title-small">Most recent work</p>
+<section class="slider">
+
+  <div class="cards">
+    <% @primary_repos.each do |repo| %>
+      <%= link_to joana_repo_path(@joana, repo.id) do %>
+        <div class="card">
+          <h4><%= repo.format_name(repo.name) %></h4>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
+
+  <div class="cards">
+    <% @secondary_repos.each do |repo| %>
+      <%= link_to joana_repo_path(@joana, repo.id) do %>          
+        <div class="card">
+          <h4><%= repo.format_name(repo.name) %></h4>
+        </div>
+      <% end %>
+    <% end %>
+    <a href="https://github.com/JBertoldi?tab=repositories" target="_blank">
+      <div class="card" id="card-last">
+        <h4><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></h4>
+      </div>
+    </a>
+  </div>
+
+</section>
+
+<div id="swipe">
+  <i class="fas fa-chevron-left"></i>
+  <p>swipe</p>
+  <i class="fas fa-chevron-right"></i>
 </div>
 
-<a href="https://github.com/JBertoldi?tab=repositories">See more</a>
 <span class="gh-days" style="visibility:hidden"><%= (Date.today - @joana.gh_created_at.to_date).to_i %></span>

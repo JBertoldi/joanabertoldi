@@ -1,27 +1,56 @@
-.cards {
+.slider::-webkit-scrollbar {
+  width: 0;
+}
+
+.slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+.slider {
+  -ms-overflow-style: none;
+}
+
+.slider {
   width: 100%;
   height: max-content;
-  margin-top: 1%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.cards {
+  flex-shrink: 0;
+  width: 100%;
+  height: max-content;
+  margin: 1% auto;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#card-last i {
+  font-size: 14px;
+  padding: 0 6px;
 }
 
 .card {
-  width: 350px;
-  height: 280px;
+  width: 330px;
+  height: 270px;
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color .3s;
-  // background-image: url("../images/fit-food.png");
-  // background-position: center;
-  // background-size:cover;
 }
 
 .card:hover {
@@ -31,4 +60,21 @@
 .card h4 {
   font-weight: 500;
   letter-spacing: 1.5px;
+  text-align: center;
+}
+
+#swipe {
+  width: max-content;
+  height: max-content;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 18px;
+  p {
+    font-size: 16px;
+    padding: 0 5px 2px 8px;
+    font-weight: 600;
+  }
 }

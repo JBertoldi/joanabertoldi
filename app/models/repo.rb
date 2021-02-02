@@ -7,7 +7,7 @@ class Repo < ApplicationRecord
 
   before_validation :strip_details
 
-  scope :date_ordered, -> { order(gh_created_at: :desc) }
+  scope :commit_ordered, -> { order(commits_count: :desc) }
 
   def format_name(name)
     name_arr = name.split('-')

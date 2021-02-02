@@ -29,6 +29,10 @@
   }
 }
 
+.info p:first-child {
+  margin-bottom: 4px;
+}
+
 // Add space to give hash effect
 .tabbed {
   margin-left: 12px;
