@@ -39,9 +39,10 @@
     margin-bottom: 3px;
   }
 }
+
 // Navbar - right links
 .nav-links {
-  width: 400px;
+  width: 40%;
   height: 100%;
   text-align: center;
   display: flex;
@@ -58,4 +59,29 @@
   font-family: $body-font;
   font-size: 22px;
   display: block;
+}
+
+// @media screen and (min-width: 1000px) and (max-width: 1024px) {
+
+// }
+
+// @media screen and (min-width: 501px) and (max-width: 1000px) {
+
+// }
+
+@media screen and (max-width:500px) {
+  .nav-links {
+    width: 100%;
+  }
+
+  .home-link {
+    height: 42px;
+    h4 {
+      font-size: 18px;
+    }
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
 }

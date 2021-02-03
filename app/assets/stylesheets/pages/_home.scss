@@ -41,3 +41,18 @@
 .tabbed p:nth-child(3) {
   padding-left: 3px;
 }
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .infos-container {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .infos-container {
+    width: 90%;
+    height: max-content;
+    margin: auto;
+    letter-spacing: 1px;
+  }
+}
