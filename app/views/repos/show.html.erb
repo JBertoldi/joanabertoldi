@@ -2,9 +2,23 @@
 
 <div class="show-inner-main">
   <div class="show-inner show-info">
-    <%= render "repos/read_me/#{@repo.name}" %>
-    <%= link_to @repo.html_url, target: '_blank', class: 'btn btn-flat', id: 'btn-website' do %>
-      <p>Website</p>
+    
+    <div class="read-me-info">
+      <div class="read-me-info-inner">
+        <%= render "repos/read_me/#{@repo.name}" %>
+      </div>
+    </div>
+    
+    <div class="technologies">
+      <% @repo.technologies.each do |tech| %>
+        <span><%= tech.name %></span>
+      <% end %>
+    </div>
+
+    <% if @repo.website_url.present? %>
+      <%= link_to @repo.website_url, target: '_blank', class: 'btn btn-flat', id: 'btn-website' do %>
+        <p>Go to Website</p>
+      <% end %>
     <% end %>
   </div>
   <div class="show-inner show-commits">

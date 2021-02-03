@@ -2,6 +2,7 @@ function insertRepos(doc) {
   const repositories = document.querySelector('.repositories');
   const repos = doc.querySelector('.Counter').innerHTML;
 
+  repositories.innerHTML = '';
   repositories.insertAdjacentHTML('beforeend', `<i class="fas fa-laptop-code"></i>${repos} repositories created`);
 }
 
@@ -22,7 +23,9 @@ function insertContributionsInfo(doc) {
 
   const contriString = contriTextArr.join(' ');
 
+  dailyAvg.innerHTML = '';
   dailyAvg.insertAdjacentHTML('beforeend', `<i class="fas fa-chart-line"></i> ${avg} contributions per day`);
+  contributions.innerHTML = '';
   contributions.insertAdjacentHTML('beforeend', `<i class="fas fa-code"></i> ${contriString}`);
 }
 
