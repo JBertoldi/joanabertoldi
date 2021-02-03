@@ -6,6 +6,6 @@ class ReposController < ApplicationController
   end
 
   def show
-    @repo = Repo.find(params[:id])
+    @repo = Repo.find_by(slug: params[:slug])
   end
 end
