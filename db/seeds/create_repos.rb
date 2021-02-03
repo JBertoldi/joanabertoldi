@@ -1,4 +1,6 @@
 require_relative 'get_json'
+require_relative 'technologies'
+require_relative 'website'
 
 def collab_count(owner, repo_name)
   url = "https://api.github.com/repos/#{owner}/#{repo_name}/collaborators"
@@ -20,8 +22,9 @@ def create_repos(json)
   json.each do |repo|
     next unless filtered_repos.include?(repo[:name])
 
-    Repo.create!(
+    repository = Repo.create!(
       name: repo[:name],
+      website_url: get_website(repo[:name]),
       html_url: repo[:html_url],
       repo_owner: repo[:owner][:login],
       collaborators_count: collab_count(repo[:owner][:login], repo[:name]),
@@ -30,6 +33,7 @@ def create_repos(json)
       joana_id: Joana.last.id
     )
 
+    repository.technologies << get_tech(repository.name)
     display_repo(Repo.last)
   end
 end

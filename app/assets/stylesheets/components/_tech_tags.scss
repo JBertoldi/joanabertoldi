@@ -1,0 +1,16 @@
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 8px 0;
+}
+
+.technologies span {
+  padding: 4px 10px 5px 10px;
+  margin: 4px 6px;
+  border-radius: 16px;
+  background-color: $light-yellow;
+  color: $dark-blue;
+  font-weight: 600;
+  font-size: 13px;
+}

@@ -21,6 +21,20 @@
   background-color: rgba(0,0,0,0.3);
 }
 
+#btn-website {
+  width: fit-content;
+  position: absolute;
+  right: 45%;
+  bottom: 0;
+  margin-top: 6px;
+  padding: 0 12px;
+  font-size: 18px;
+}
+
+#btn-website:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
 // Btn - flat
 .btn-flat {
   font-size: 22px;

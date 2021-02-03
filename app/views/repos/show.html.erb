@@ -2,16 +2,32 @@
 
 <div class="show-inner-main">
   <div class="show-inner show-info">
-    <p><%= @repo.html_url %></p>
-    <p><%= @repo.commits_count %></p>
-    <p><%= @repo.repo_owner %></p>
-    <p><%= @repo.collaborators_count %></p>
+    
+    <div class="read-me-info">
+      <div class="read-me-info-inner">
+        <%= render "repos/read_me/#{@repo.name}" %>
+      </div>
+    </div>
+    
+    <div class="technologies">
+      <% @repo.technologies.each do |tech| %>
+        <span><%= tech.name %></span>
+      <% end %>
+    </div>
+
+    <% if @repo.website_url.present? %>
+      <%= link_to @repo.website_url, target: '_blank', class: 'btn btn-flat', id: 'btn-website' do %>
+        <p>Go to Website</p>
+      <% end %>
+    <% end %>
   </div>
   <div class="show-inner show-commits">
-    <p><%= @joana.username %> commits</p>
-    <ul>
-      <% @repo.commits.each do |commit| %>
-        <li><i class="fas fa-angle-double-right"></i> <a href="<%= commit.html_url %>" target="_blank"><%= commit.message%></a></li>
+    <p>Latest commits</p>
+    <ul class="show-commits-inner">
+      <% @repo.commits.each do |commit| %> 
+        <%= link_to commit.html_url, target: '_blank' do %>
+          <li><i class="fas fa-heart"></i><%= commit.message %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>
