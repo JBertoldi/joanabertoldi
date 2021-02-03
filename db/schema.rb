@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_03_145942) do
+ActiveRecord::Schema.define(version: 2021_02_03_201226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2021_02_03_145942) do
     t.string "repos_url"
     t.datetime "gh_created_at"
     t.integer "repos_count", default: 0
+    t.string "slug"
+    t.index ["slug"], name: "index_joanas_on_slug", unique: true
   end
 
   create_table "repos", force: :cascade do |t|
@@ -50,7 +52,9 @@ ActiveRecord::Schema.define(version: 2021_02_03_145942) do
     t.string "repo_owner"
     t.integer "collaborators_count", default: 0
     t.string "website_url"
+    t.string "slug"
     t.index ["joana_id"], name: "index_repos_on_joana_id"
+    t.index ["slug"], name: "index_repos_on_slug", unique: true
   end
 
   create_table "repos_technologies", id: false, force: :cascade do |t|
