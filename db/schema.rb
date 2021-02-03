@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_31_151809) do
+ActiveRecord::Schema.define(version: 2021_02_03_145942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,21 @@ ActiveRecord::Schema.define(version: 2021_01_31_151809) do
     t.string "commits_url"
     t.string "repo_owner"
     t.integer "collaborators_count", default: 0
+    t.string "website_url"
     t.index ["joana_id"], name: "index_repos_on_joana_id"
+  end
+
+  create_table "repos_technologies", id: false, force: :cascade do |t|
+    t.bigint "repo_id", null: false
+    t.bigint "technology_id", null: false
+    t.index ["repo_id"], name: "index_repos_technologies_on_repo_id"
+    t.index ["technology_id"], name: "index_repos_technologies_on_technology_id"
+  end
+
+  create_table "technologies", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "commits", "repos"
