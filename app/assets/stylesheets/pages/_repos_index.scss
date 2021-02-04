@@ -34,3 +34,17 @@
 .title-small {
   margin-left: 3.6%;
 }
+
+@media screen and (max-width:500px) {
+  .repo-info p {
+    font-size: 12px;
+  }
+
+  .repo-info i {
+    font-size: 15px;
+  }
+
+  .repo-info:nth-child(3) i {
+    font-size: 16px;
+  }
+}

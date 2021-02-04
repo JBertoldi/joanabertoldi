@@ -65,3 +65,25 @@
 .link:hover, .active {
   border-bottom: 2px solid #fff;
 }
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  #btn-website {
+    width: fit-content;
+    position: unset;
+    margin: 4% auto;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .btn {
+    width: 102px;
+    height: 45px;
+  }
+
+  #btn-website {
+    width: fit-content;
+    position: unset;
+    margin: 12% auto;
+    font-size: 18px;
+  }
+}

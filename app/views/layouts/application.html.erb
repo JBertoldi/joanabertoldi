@@ -10,11 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="main-container">
 
     <%= render 'shared/navbar' %>
-
-    <div class="main-container">
 
       <% if current_page?(root_path) %>
         <%= yield %>
@@ -25,8 +23,6 @@
         </div>
         <%= render 'shared/contact_info' %>
       <% end %>
-
-    </div>
 
     <%= render 'shared/footer' %>
 

@@ -29,3 +29,18 @@ footer {
     color: rgba(0,0,0,0.7);
   }
 }
+
+@media screen and (max-width:500px) {
+  footer {
+    height: 40px;
+  }
+
+  footer .footer-info {
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    font-size: 18px;
+  }
+}
