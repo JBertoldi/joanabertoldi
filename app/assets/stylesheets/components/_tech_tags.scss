@@ -14,3 +14,10 @@
   font-weight: 600;
   font-size: 13px;
 }
+
+@media screen and (max-width:500px) {
+  .technologies {
+    justify-content: end;
+    margin-top: 6%;
+  }
+}

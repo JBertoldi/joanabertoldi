@@ -78,3 +78,33 @@
     font-weight: 600;
   }
 }
+
+@media screen and (max-width:500px) {
+  .slider {
+    overflow-x: hidden;
+  }
+
+  .cards {
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 5% auto;
+    width: 90%;
+    height: 200px;
+  }
+
+  .card h4 {
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  #swipe {
+    display: none;
+  }
+}
