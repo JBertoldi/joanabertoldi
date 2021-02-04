@@ -79,6 +79,18 @@
   }
 }
 
+
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .card {
+    width: 225px;
+    height: 201px;
+  }
+  h4 {
+    font-weight: 18px;
+  }
+}
+
 @media screen and (max-width:500px) {
   .slider {
     overflow-x: hidden;
@@ -94,14 +106,14 @@
   .card {
     margin: 5% auto;
     width: 90%;
-    height: 200px;
+    height: 240px;
   }
 
   .card h4 {
     font-weight: 500;
     letter-spacing: 1.5px;
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
   }
 
   #swipe {
