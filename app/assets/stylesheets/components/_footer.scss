@@ -10,7 +10,7 @@ footer {
     padding-right: 2%;
     display: inline-flex;
     justify-content: flex-end;
-    align-items: baseline;
+    align-items: center;
 
     div:first-child p {
       font-size: 12px;
@@ -37,7 +37,6 @@ footer {
 
   footer .footer-info {
     justify-content: center;
-    align-items: center;
   }
 
   i {
