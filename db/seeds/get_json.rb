@@ -1,4 +1,5 @@
 def get_json(url, production: false)
+  puts ' '
   puts 'Getting response..'
 
   production ? url = "#{url}?page=1&per_page=1000" : url

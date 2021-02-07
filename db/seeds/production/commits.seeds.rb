@@ -8,7 +8,8 @@ after 'production:repos' do
     url = repo.commits_url
     json = get_json(url, production: true)
 
-    puts 'Creating commits..'
+    puts "Creating commits for #{repo.name} .."
+    puts ' '
     create_commits(json, repo.id)
 
     puts 'Done'
