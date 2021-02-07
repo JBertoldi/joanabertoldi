@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 gem 'font-awesome-sass'
+gem 'gon'
 gem 'rest-client'
 gem 'seedbank'
 gem 'slug'

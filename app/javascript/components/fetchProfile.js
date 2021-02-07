@@ -31,9 +31,8 @@ function insertContributionsInfo(doc) {
 
 function getProfileInfo() {
   if (document.querySelector('.repos-info')) {
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
-    fetch(`${proxyUrl}https://github.com/jbertoldi`)
+    fetch(`${gon.scrape_url}https://github.com/jbertoldi`)
       .then(response => response.text())
       .then(data => {
         const doc = new DOMParser().parseFromString(data, "text/html");
