@@ -18,4 +18,8 @@ class Repo < ApplicationRecord
   def to_param
     slug
   end
+
+  def collaborative?
+    collaborators_count != 1
+  end
 end

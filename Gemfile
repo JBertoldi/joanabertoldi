@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'font-awesome-sass'
 gem 'gon'
+gem 'humanize'
 gem 'rest-client'
 gem 'seedbank'
 gem 'slug'
