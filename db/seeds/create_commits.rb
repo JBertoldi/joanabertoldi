@@ -10,7 +10,7 @@ def create_commits(json, repo_id)
   json.each do |commit|
     next if commit[:author][:login] != Joana.last.username
 
-    Commit.create!(
+    Commit.create_or_find_by(
       message: commit[:commit][:message],
       html_url: commit[:html_url],
       gh_created_at: commit[:commit][:author][:date],
