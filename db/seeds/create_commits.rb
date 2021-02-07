@@ -1,9 +1,7 @@
 def display_commit(commit)
-  puts '    '
   puts commit.message
   puts commit.gh_created_at
-
-  sleep(2)
+  puts ' '
 end
 
 def create_commits(json, repo_id)
