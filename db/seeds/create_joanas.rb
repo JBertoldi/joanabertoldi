@@ -1,9 +1,9 @@
-def display_joana(joana)
-  joana.as_json.each { |attr| puts attr }
+def display_object(object)
+  object.as_json.each { |key, val| puts "#{key}:     #{val}" }
 end
 
 def create_joanas(json)
-  Joana.create!(
+  joana = Joana.create!(
     name: json[:name],
     username: json[:login],
     location: json[:location],
@@ -13,5 +13,5 @@ def create_joanas(json)
     gh_created_at: json[:created_at]
   )
 
-  puts display_joana(Joana.last)
+  puts display_object(joana)
 end
