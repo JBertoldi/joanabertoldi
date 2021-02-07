@@ -26,7 +26,7 @@ def create_repos(json)
       name: repo[:name],
       website_url: get_website(repo[:name]),
       html_url: repo[:html_url],
-      repo_owner: repo[:owner][:login],
+      owner: repo[:owner][:login],
       collaborators_count: collab_count(repo[:owner][:login], repo[:name]),
       gh_created_at: repo[:created_at],
       commits_url: repo[:commits_url].gsub('{/sha}', ''),

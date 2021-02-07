@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_03_201226) do
+ActiveRecord::Schema.define(version: 2021_02_07_205603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_201226) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "gh_created_at"
     t.string "commits_url"
-    t.string "repo_owner"
+    t.string "owner"
     t.integer "collaborators_count", default: 0
     t.string "website_url"
     t.string "slug"
