@@ -1,6 +1,6 @@
-desc 'update commits'
+desc 'Update commits'
 task update_commits: :environment do
   puts 'Updating commits...'
-  load "#{Rails.root}/db/seeds/production/commits.seeds.rb"
+  load "#{Rails.root}/lib/tasks/update_commits.rb"
   puts 'Commits updated!'
 end
