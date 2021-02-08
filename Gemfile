@@ -32,6 +32,8 @@ gem 'gon'
 gem 'humanize'
 gem 'rest-client'
 gem 'seedbank'
+gem 'sentry-ruby'
+gem 'sentry-rails'
 gem 'slug'
 
 # Reduces boot times through caching; required in config/boot.rb
