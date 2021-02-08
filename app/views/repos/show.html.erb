@@ -26,7 +26,7 @@
   <div class="show-inner show-commits">
     <p>Latest commits</p>
     <ul class="show-commits-inner">
-      <% @repo.commits.each do |commit| %> 
+      <% @repo.commits.time_ordered.each do |commit| %> 
         <%= link_to commit.html_url, target: '_blank' do %>
           <li><i class="fas fa-heart"></i><%= commit.message %></li>
         <% end %>
